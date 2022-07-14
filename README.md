@@ -11,3 +11,20 @@ Neste projeto foram usadas as seguinte tecnologias: NodeJs e Puppeteer.
 `git clone` </br>
 `npm install` </br>
 `node index.js` </br>
+
+
+#ENG Version:
+
+## Bot-linkedin
+A bot created to send messages to recruiters in the IT area.
+
+## What is it for?
+Due to the demand of having to connect with employers, and the repetitive effort of sending messages and waiting for responses, I created a bot to automate this process, being only necessary to put it to work and wait for the contact from employers. The application sends an invitation to the IT recruiter with a personalized message.
+
+## Which technologies?
+In this project the following technologies were used: NodeJs and Puppeteer.
+
+##How to run?
+`git clone` </br>
+`npm install` </br>
+`node index.js` </br>
