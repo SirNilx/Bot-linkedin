@@ -26,7 +26,7 @@ Due to the demand of having to connect with employers, and the repetitive effort
 ## Which technologies?
 In this project the following technologies were used: NodeJs and Puppeteer.
 
-##How to run?
+## How to run?
 `git clone` </br>
 `npm install` </br>
 `node index.js` </br>
