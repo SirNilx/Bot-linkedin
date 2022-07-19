@@ -50,13 +50,23 @@ async function navigatePages(page, navigationPage) {
 
         const cleanName = name ? name.split("JSHandle:")[1].toString().replace(/<!---->/g, '').replace(/[^a-z0-9 ]/gi, '') : "erro";
 
-        const connectar = await result.$('.entity-result__actions.entity-result__divider > div > button');
-        if(!connectar){
+        const connect = await result.$('.entity-result__actions.entity-result__divider > div > button');
+        if(!connect){
             totalClickableElements--;
             continue;
-        }
-        await connectar.click('.entity-result__actions.entity-result__divider > div > button');
 
+        }else{
+            const sendMessage = await result.$('div.entry-point button');
+            const follow = await result.$('[data-test-reusable-search-primary-action]'); 
+                if(follow){
+                    continue;
+                }else if(sendMessage){
+                    continue;
+                }else{
+                    await connect.click('.entity-resultactions.entity-resultdivider > div > button');
+                }
+        }
+       
         await sleep(2000);
 
         const addNote = await page.$('[aria-label="Adicionar nota"]');
@@ -113,5 +123,3 @@ async function makeAuth(page) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-
